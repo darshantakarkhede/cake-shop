@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>FIlter</title>
+</head>
+
+<body>
+    <main>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="/image/logo.svg" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarsExample07">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Store</a>
+                        </li>
+
+
+                    </ul>
+                    <button type="button" class="btn btn-outline-light cartBtn" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+            </div>
+        </nav>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Cart</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        
+                        <!-- <div class="cart-item d-flex justify-content-between text-capitalize my-3">
+                            <img src="/image/cake-1.jpeg" class="img-fluid rounded-circle " style="width: 50px;"  id="item-img" alt="">
+                            <div class="item-text">
+                                <p id="cart-item-title" class="font-weight-bold mb-0">cake</p>
+                                <span>$</span>
+                                <span id="cart-item-price" class="cart-item-price" class="mb-0">5</span>
+                            </div>
+                            <a href="#" id='cart-item-remove' class="cart-item-remove">
+                                <i class="fas fa-trash"></i></a>
+                        </div> -->
+
+                    </div>
+                    <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
+                        <h5>total</h5>
+                        <h5> $ <strong id="cart-total" class="font-weight-bold"></strong> </h5>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="py-5 text-center container-fluid img-fluid">
+            <div class="row py-lg-5">
+                <div class="col-lg-6 col-md-8 mx-auto">
+                    <h1 class="fw-light">Welcome To Grandma's</h1>
+                    <button type="button" class="btn btn-outline-secondary">Explore</button>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6 my-5">
+                    <h1 class="text-capitalize">about <strong class="banner-title ">us</strong></h1>
+                    <p class="my-4 text-muted w-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit,
+                        aliquam voluptas
+                        beatae vitae expedita consectetur nesciunt quia deserunt asperiores facere fuga dicta fugiat
+                        corrupti et omnis
+                        porro at dolorum! Ad!</p>
+                    <a href="#" class="btn btn-outline-secondary btn-black text-uppercase ">explore</a>
+
+                </div>
+                <div class="col-10 mx-auto col-md-6 align-self-center my-5">
+                    <div class="about-img__container">
+                        <img src="/image/sweets-1.jpeg" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-light pb-3">
+            <h2 class="text-center pt-5 mb-5">Our Store</h2>
+            <div class="container">
+                <div class="row ">
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-secondary search-btn"
+                            data-filter="all">All</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-secondary search-btn"
+                            data-filter="cake">Cake</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-secondary search-btn"
+                            data-filter="cupcake">Cupcake</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-secondary search-btn"
+                            data-filter="sweets">Sweets</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-outline-secondary search-btn"
+                            data-filter="doughnut">Doughnut</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-light bg-light ">
+            <div class="container justify-content-center">
+                <form class="d-flex">
+                    <input id="search-item" class="form-control me-2 search-input" type="search"
+                        placeholder="Search items.." aria-label="Search">
+                </form>
+            </div>
+        </nav>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div class="row  g-3 d-flex justify-content-evenly">
+                    <div class="col cake store-item" data-item="cake">
+                        <div class="card" style="width: 20rem;">
+                            <img src="/image/cake-1.jpeg" class="card-img-top store-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Cake Item</h5>
+                                <h5 class="card-title"><span>$</span> <span class="itemPrice">5</span></h5>
+                                <button class="btn btn-outline-secondary cart-item-btn"><i
+                                        class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col cake store-item" data-item="cake">
+                        <div class="card" style="width: 20rem;">
+                            <img src="/image/cake-2.jpeg" class="card-img-top store-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Cake Item</h5>
+                                <h5 class="card-title"><span>$</span> <span class="itemPrice">15</span></h5>
+                                <button class="btn btn-outline-secondary cart-item-btn"><i
+                                        class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col cake store-item" data-item="cake">
+                        <div class="card" style="width: 20rem;">
+                            <img src="/image/cake-3.jpeg" class="card-img-top store-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Cake Item</h5>
+                                <h5 class="card-title"><span>$</span> <span class="itemPrice">10</span></h5>
+                                <button class="btn btn-outline-secondary cart-item-btn"><i
+                                        class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col cupcake store-item" data-item="cupcake">
+                        <div class="card" style="width: 20rem;">
+                            <img src="/image/cupcake-1.jpeg" class="card-img-top store-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Cupcake Item</h5>
+                                <h5 class="card-title"><span>$</span> <span class="itemPrice">5</span></h5>
+                                <button class="btn btn-outline-secondary cart-item-btn"><i
+                                        class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col cupcake store-item" data-item="cupcake">
+                        <div class="card" style="width: 20rem;">
+                            <img src="/image/cupcake-2.jpeg" class="card-img-top store-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Cupcake Item</h5>
+                                <h5 class="card-title"><span>$</span> <span class="itemPrice">5</span></h5>
+                                <button class="btn btn-outline-secondary cart-item-btn"><i
+                                        class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col cupcake store-item" data-item="cupcake">
+                        <div class="card" style="width: 20rem;">
+                            <img src="/image/cupcake-3.jpeg" class="card-img-top store-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Cupcake Item</h5>
+                                <h5 class="card-title"><span>$</span> <span class="itemPrice">10</span></h5>
+                                <button class="btn btn-outline-secondary cart-item-btn"><i
+                                        class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col doughnut store-item" data-item="doughnut">
+                        <div class="card" style="width: 20rem;">
+                            <img src="/image/doughnut-1.jpeg" class="card-img-top store-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Doughnut Item</h5>
+                                <h5 class="card-title"><span>$</span> <span class="itemPrice">15</span></h5>
+                                <button class="btn btn-outline-secondary cart-item-btn"><i
+                                        class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col doughnut store-item" data-item="doughnut">
+                        <div class="card" style="width: 20rem;">
+                            <img src="/image/doughnut-2.jpeg" class="card-img-top store-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Doughnut Item</h5>
+                                <h5 class="card-title"><span>$</span> <span class="itemPrice">7</span></h5>
+                                <button class="btn btn-outline-secondary cart-item-btn"><i
+                                        class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col doughnut store-item" data-item="doughnut">
+                        <div class="card" style="width: 20rem;">
+                            <img src="/image/doughnut-3.jpeg" class="card-img-top store-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Doughnut Item</h5>
+                                <h5 class="card-title"><span>$</span> <span class="itemPrice">14</span></h5>
+                                <button class="btn btn-outline-secondary cart-item-btn"><i
+                                        class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col sweets store-item" data-item="sweets">
+                        <div class="card" style="width: 20rem;">
+                            <img src="/image/sweets-1.jpeg" class="card-img-top store-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Sweets Item</h5>
+                                <h5 class="card-title"><span>$</span> <span class="itemPrice">15</span></h5>
+                                <button class="btn btn-outline-secondary cart-item-btn"><i
+                                        class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col sweets store-item" data-item="sweets">
+                        <div class="card" style="width: 20rem;">
+                            <img src="/image/sweets-2.jpeg" class="card-img-top store-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Sweets Item</h5>
+                                <h5 class="card-title"><span>$</span> <span class="itemPrice">8</span></h5>
+                                <button class="btn btn-outline-secondary cart-item-btn"><i
+                                        class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col sweets store-item" data-item="sweets">
+                        <div class="card" style="width: 20rem;">
+                            <img src="/image/sweets-3.jpeg" class="card-img-top store-img" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Sweets Item</h5>
+                                <h5 class="card-title"><span>$</span> <span class="itemPrice">12</span></h5>
+                                <button class="btn btn-outline-secondary cart-item-btn"><i
+                                        class="fas fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <div class="container-fluid modal-container">
+        <div class="modal-1">
+            <button class="btn prevBtn butn"><i class="fas fa-chevron-left"></i></button>
+            <button id="close"><i class="fas fa-times"></i></button>
+            <button class="btn nxtBtn butn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+
+    <script src="app.js"></script>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

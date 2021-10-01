@@ -1,0 +1,67 @@
+section{
+    background: url(/image/headerBcg.jpeg);
+    background-size: cover;
+}
+.modal-container{
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    pointer-events: none;
+}
+.modal-container.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-1{
+    background: white;
+    background-size: cover;
+    width: 700px;
+    height: 50vh;
+    max-width: 100%;
+    
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    background-repeat: no-repeat;
+}
+.store-item{
+    cursor: pointer;
+}
+
+.prevBtn{
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    border: 2px solid black;
+    border-radius: 50%;
+    background: white;
+}
+.nxtBtn{
+    position: absolute;
+    right: 0%;
+    top: 50%;
+    border: 2px solid black;
+    border-radius: 50%;
+    background: white;
+}
+
+#close{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    border: 2px solid black;
+    border-radius: 50%;
+    
+}
+.cart-item{
+    width: 80%;
+}
